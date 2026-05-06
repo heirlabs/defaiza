@@ -21,7 +21,7 @@
     "dependencies": {
         "@elizaos/core": "workspace:*",
         "@elizaos/plugin-node": "workspace:*",
-        "@discordjs/opus": "github:discordjs/opus",
+        "@discordjs/opus": "^0.10.0",
         "@discordjs/rest": "2.4.0",
         "@discordjs/voice": "0.17.0",
         "discord.js": "14.16.3",
@@ -40,7 +40,7 @@
         "test": "vitest run"
     },
     "trustedDependencies": {
-        "@discordjs/opus": "github:discordjs/opus",
+        "@discordjs/opus": "^0.10.0",
         "@discordjs/voice": "0.17.0"
     },
     "peerDependencies": {
