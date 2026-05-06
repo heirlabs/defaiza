@@ -19,6 +19,13 @@ jobs:
                   node-version: "23"
                   cache: "pnpm"
 
+            - name: Install native build deps for canvas/opus
+              run: |
+                  sudo apt-get update
+                  sudo apt-get install -y \
+                      libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev \
+                      librsvg2-dev libpixman-1-dev libopus-dev pkg-config
+
             - name: Install dependencies
               run: pnpm install -r --no-frozen-lockfile
 
