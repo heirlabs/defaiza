@@ -1,0 +1,13 @@
+[package]
+name = "defai-protocol-common"
+version.workspace = true
+edition.workspace = true
+description = "Shared protocol constants and governance for DEFAI Solana programs"
+
+[features]
+default = ["prod-governance"]
+prod-governance = []
+dev-governance-bypass = []
+
+[dependencies]
+anchor-lang = { workspace = true }

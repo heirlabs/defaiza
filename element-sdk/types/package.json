@@ -1,0 +1,10 @@
+{
+  "name": "@defai/element-types",
+  "version": "1.0.0",
+  "description": "TypeScript type declarations for DEFAI Element SDK",
+  "type": "module",
+  "main": "index.d.ts",
+  "types": "index.d.ts",
+  "files": ["index.d.ts"],
+  "license": "MIT"
+}

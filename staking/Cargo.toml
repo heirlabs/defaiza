@@ -1,0 +1,25 @@
+[package]
+name = "DEFAI-staking"
+version = "0.1.0"
+description = "DEFAI token staking program for debit card tier unlocking"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "defai_staking"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = ["prod-governance"]
+prod-governance = ["defai-protocol-common/prod-governance"]
+test-bypass = ["defai-protocol-common/dev-governance-bypass"]
+idl-build = ["anchor-lang/idl-build", "anchor-spl/idl-build"]
+
+[dependencies]
+anchor-lang = { workspace = true }
+anchor-spl = { workspace = true }
+defai-protocol-common = { workspace = true, default-features = false, features = ["prod-governance"] }
+defai_swap = { workspace = true, features = ["cpi"] }
