@@ -1,0 +1,27 @@
+name: DEFAI Programs Health Monitor
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+defaults:
+  run:
+    working-directory: site/external/defai
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Solana CLI
+        run: |
+          sh -c "$(curl -sSfL https://release.anza.xyz/v3.1.8/install)"
+          echo "$HOME/.local/share/solana/install/active_release/bin" >> "$GITHUB_PATH"
+
+      - name: Program health check
+        env:
+          # Programs are deployed on devnet today; override when mainnet goes live.
+          SOLANA_URL: https://api.devnet.solana.com
+        run: bash scripts/monitor-programs.sh

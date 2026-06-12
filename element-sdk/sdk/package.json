@@ -1,0 +1,23 @@
+{
+  "name": "@defai/element-sdk",
+  "version": "1.0.0",
+  "description": "DEFAI Element SDK for HEIR.ES inheritance smart contract platform",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./contract-generator": "./lib/contract-generator.js",
+    "./deployment": "./lib/deployment.js",
+    "./verification": "./lib/verification.js",
+    "./gas-estimator": "./lib/gas-estimator.js",
+    "./event-emitter": "./lib/event-emitter.js"
+  },
+  "files": ["lib/"],
+  "peerDependencies": {
+    "viem": "^2.0.0",
+    "ethers": "^6.0.0",
+    "@solana/web3.js": "^1.70.0",
+    "eventemitter3": "^5.0.0"
+  },
+  "license": "MIT"
+}

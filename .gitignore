@@ -1,5 +1,12 @@
 node_modules
 /out
+target/
+
+# Legacy Hardhat / Foundry artifacts (Solana BPF is canonical)
+**/artifacts/
+**/cache/
+**/node_modules/
+*.pdf
 
 
 .env.production

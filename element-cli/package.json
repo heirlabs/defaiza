@@ -1,0 +1,19 @@
+{
+  "name": "@defai/element-cli",
+  "version": "1.0.0",
+  "description": "CLI for DEFAI Element SDK - generate, deploy, verify, and estimate HEIR inheritance contracts",
+  "type": "module",
+  "main": "lib/commands/generate.js",
+  "bin": {
+    "defai": "./bin/defai.js"
+  },
+  "files": ["bin/", "lib/"],
+  "dependencies": {
+    "commander": "^14.0.0",
+    "chalk": "^5.0.0"
+  },
+  "peerDependencies": {
+    "@defai/element-sdk": "^1.0.0"
+  },
+  "license": "MIT"
+}

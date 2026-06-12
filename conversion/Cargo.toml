@@ -1,0 +1,29 @@
+[package]
+name = "defai_swap"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "defai_swap"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = ["prod-governance"]
+prod-governance = ["defai-protocol-common/prod-governance"]
+test-bypass = ["defai-protocol-common/dev-governance-bypass"]
+idl-build = ["anchor-lang/idl-build", "anchor-spl/idl-build"]
+
+[dependencies]
+anchor-lang = { workspace = true }
+anchor-spl = { workspace = true }
+solana-program = { workspace = true }
+defai-protocol-common = { workspace = true, default-features = false, features = ["prod-governance"] }
+
+[dev-dependencies]
+spl-token = "4.0"

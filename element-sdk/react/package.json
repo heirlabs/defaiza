@@ -1,0 +1,16 @@
+{
+  "name": "@defai/element-react",
+  "version": "1.0.0",
+  "description": "React hooks and components for DEFAI Element SDK",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js"
+  },
+  "files": ["index.js"],
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "@defai/element-sdk": "^1.0.0"
+  },
+  "license": "MIT"
+}
